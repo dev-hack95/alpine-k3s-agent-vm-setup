@@ -41,7 +41,7 @@ Download the K3s binary and set execution permissions.
 
 ```bash
 curl -sfL https://get.k3s.io | K3S_URL=https://192.168.1.2:6443 \
-K3S_TOKEN=K109008e4da73637304b234295e92b9a9dbe4115b54b4691526e695ee76ce98687d::server:VasMe9uwbwMXaZFUcovXt4zcorA= \
+K3S_TOKEN=<token> \
 sh -s - agent
 
 ```

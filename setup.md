@@ -130,5 +130,3 @@ Since K3s is supervised by `supervise-daemon`, logs are redirected to a file.
 * **Port 10250 Busy:** Run `killall -9 k3s` and restart the service.
 
 ---
-
-**Would you like me to help you create a custom `docker-compose.yaml` to test your new Docker installation?**

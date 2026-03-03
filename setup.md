@@ -57,7 +57,7 @@ To ensure the agent starts correctly on boot with the specific network flags req
 ```bash
 command_args="agent \
   --server https://192.168.1.2:6443 \
-  --token K109008e4da73637304b234295e92b9a9dbe4115b54b4691526e695ee76ce98687d::server:VasMe9uwbwMXaZFUcovXt4zcorA= \
+  --token <TOKEN> \
   --node-ip 10.0.2.15 \
   --node-external-ip 192.168.1.8"
 

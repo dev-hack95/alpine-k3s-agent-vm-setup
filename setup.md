@@ -20,6 +20,7 @@ qemu-system-x86_64 -m 4096 -smp 6,cores=6 -cpu max \
   -nographic \
   -serial mon:stdio \
   -D qemu_debug.log
+```
 ---
 
 # 🚀 Alpine K3s Agent Setup Guide

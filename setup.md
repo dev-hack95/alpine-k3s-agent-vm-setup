@@ -1,5 +1,25 @@
-This README is designed specifically for your **Alpine Linux VM** running inside **QEMU/Termux**, connecting as an agent to a **Raspberry Pi** Master.
+# Alpine VM
 
+## First boot
+```bash
+qemu-system-x86-64 -m 4096 -smp 2 \
+  -drive file=alpine.qcow2,if=virtio \
+  -cdrom alpine-virt-3.20.0-x86_64.iso \
+  -netdev user,id=n1 -device virtio-net-pci,netdev=n1 \
+  -nographic -boot d
+```
+
+## Start VM
+
+```bash
+qemu-system-x86_64 -m 4096 -smp 6,cores=6 -cpu max \
+  -accel tcg,thread=multi,tb-size=1024 \
+  -drive file=alpine.qcow2,if=virtio \
+  -netdev user,id=n1,hostfwd=tcp::10250-:10250,hostfwd=udp::8472-:8472,hostfwd=tcp::2222-:22 \
+  -device virtio-net-pci,netdev=n1 \
+  -nographic \
+  -serial mon:stdio \
+  -D qemu_debug.log
 ---
 
 # 🚀 Alpine K3s Agent Setup Guide
